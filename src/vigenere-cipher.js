@@ -68,7 +68,7 @@ class VigenereCipheringMachine {
 		arr.forEach((element, i, obj) => {
 			if (/[A-Z]/i.test(element)) {
 				let code = (element.charCodeAt(0) - key.charCodeAt(counter % key.length)) % 26;
-				obj[i] = (code >= 0) ? String.fromCharCode(START + code) : String.fromCharCode(END + code + 1); 
+				obj[i] = (code >= 0) ? String.fromCharCode(START + code) : String.fromCharCode(END + code + 1);
 				++counter;
 			}
 		});
